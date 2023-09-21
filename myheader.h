@@ -1,7 +1,7 @@
 typedef unsigned char u_char;
 typedef unsigned int u_int;
 typedef unsigned short u_short;
-
+ 
 /* Ethernet header */
 struct ethheader {
     u_char  ether_dhost[6];       // destination host address

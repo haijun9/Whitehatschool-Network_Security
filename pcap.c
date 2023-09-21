@@ -5,8 +5,7 @@
 #include <arpa/inet.h>
 #include "myheader.h"
 
-void got_packet(u_char *args, const struct pcap_pkthdr *header, const u_char *packet)
-{
+void got_packet(u_char *args, const struct pcap_pkthdr *header, const u_char *packet) {
     struct ethheader *eth = (struct ethheader *)packet;                             // Get Ethernet Header Address
 
     struct ipheader * ip = (struct ipheader *) (packet + sizeof(struct ethheader)); // Get IP Header Address
@@ -53,8 +52,7 @@ void got_packet(u_char *args, const struct pcap_pkthdr *header, const u_char *pa
     }
 }
 
-int main()
-{
+int main() {
     pcap_t *handle;
     char errbuf[PCAP_ERRBUF_SIZE];
     struct bpf_program fp;
