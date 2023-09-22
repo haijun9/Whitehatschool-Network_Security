@@ -59,7 +59,7 @@ int main() {
     char filter_exp[] = "tcp";
     bpf_u_int32 net;
     
-    // Step 1: Open live pcap session on NIC with name eth0
+    // Step 1: Open live pcap session on NIC with name enp0s8
     handle = pcap_open_live("enp0s8", BUFSIZ, 1, 1000, errbuf);
 
     // Step 2: Compile filter_exp into BPF psuedo-code
